@@ -27,6 +27,7 @@ public class TrendingFragment extends HomeFragment {
     protected RealmResults<Phramaze> getPhramazes() {
         return realmInstance
                 .where(Phramaze.class)
-                .findAllSorted("creationDate");
+                .sort("creationDate")
+                .findAll();
     }
 }

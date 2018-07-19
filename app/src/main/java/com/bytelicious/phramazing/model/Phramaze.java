@@ -5,16 +5,16 @@ import org.parceler.Parcel;
 import java.util.Date;
 import java.util.UUID;
 
-import io.realm.PhramazeRealmProxy;
 import io.realm.RealmObject;
 import io.realm.RealmResults;
 import io.realm.annotations.LinkingObjects;
 import io.realm.annotations.PrimaryKey;
+import io.realm.com_bytelicious_phramazing_model_PhramazeRealmProxy;
 
 /**
  * @author ylyubenov
  */
-@Parcel(implementations = { PhramazeRealmProxy.class },
+@Parcel(implementations = { com_bytelicious_phramazing_model_PhramazeRealmProxy.class },
         value = Parcel.Serialization.BEAN,
         analyze = { Phramaze.class })
 public class Phramaze extends RealmObject {

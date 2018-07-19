@@ -103,9 +103,11 @@ public class AddPhramazeDialogFragment extends DialogFragment implements View.On
         }
 
         try (Realm realmInstance = Realm.getDefaultInstance()) {
-            Observable.fromIterable(realmInstance.where(Phramaze.class)
-                    .distinct("author"))
-                    .map(Phramaze::getAuthor)
+            Observable.fromArray(realmInstance.where(Phramaze.class)
+                    .distinct("author")
+                    .findAll()
+                    .toArray())
+                    .map(phramaze -> ((Phramaze)phramaze).getAuthor())
                     .toList()
                     .subscribe(rs -> {
                         ArrayAdapter<String> adapter = new ArrayAdapter<>(getContext(),

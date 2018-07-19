@@ -11,4 +11,6 @@
     <string name="phramaze_removed">Phramaze Removed</string>
     <string name="undo">Undo</string>
     <string name="edit">Edit</string>
+    <string name="title_export">Export DB</string>
+    <string name="title_import">Import DB</string>
 </resources>
